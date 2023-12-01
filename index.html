@@ -106,7 +106,8 @@
         // https://github.com/googlecreativelab/teachablemachine-community/tree/master/libraries/image
 
         // the link to your model provided by Teachable Machine export panel
-        const URL = "https://teachablemachine.withgoogle.com/models/D4Ie_iZjv/";
+        // const URL = "https://teachablemachine.withgoogle.com/models/D4Ie_iZjv/";
+        const URL = "https://teachablemachine.withgoogle.com/models/r-jfw0k4s/";
 
         let model, webcam, labelContainer, maxPredictions;
         let lastLabel = '';
@@ -160,10 +161,10 @@
 
             // Map predicted class names to descriptions
             const classToDescription = {
-                "book": "this is a book, today i am very happy because i just do it. The story tell T is a best student in a class A2",
-                "Khang": "Khang",
-                "Mouse": "mouse",
-                "rubik": "rubik",
+                "book": "book",
+                "apple": "apple",
+                "broom": "broom",
+                "Hoi An Ancient Town": "Hoi An Ancient Town",
                 // Add more mappings here
             };
 
@@ -178,11 +179,11 @@
 
                 // Thay đổi hình ảnh dựa trên lớp được dự đoán
                 const imageElement = document.getElementById('predicted-image');
-                if (predictedClassName === 'book') {
+                if (predictedClassName === 'Hoi An Ancient Town') {
                     imageElement.src = './image/Hội An.png'; // Đường dẫn tới hình ảnh sách
                 }
-                else if (predictedClassName === 'Khang') {
-                    imageElement.src = 'https://anhcuoiviet.vn/wp-content/uploads/2022/11/anh-meme-hai-huoc-1.jpg'; // Đường dẫn tới hình ảnh Khang
+                else if (predictedClassName === 'book') {
+                    imageElement.src = './image/book.png'; // Đường dẫn tới hình ảnh Khang
                 }
                 // Thêm các trường hợp khác cho từng lớp cần hiển thị hình ảnh
             }
