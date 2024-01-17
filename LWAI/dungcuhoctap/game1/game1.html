@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>English Vocabulary Game</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <audio id="background-music" loop>
+        <source src="background.mp3" type="audio/mp3">
+        Your browser does not support the audio tag.
+    </audio>
+
+    <header>
+        <h1>LWAI - Web học từ vựng tiếng anh dành cho học sinh tiểu học</h1>
+    </header>
+    <div id="game-container">
+        <div id="word-display"></div>
+        <div id="options-container"></div>
+        <audio id="correct-sound" src="correct.mp3"></audio>
+        <audio id="incorrect-sound" src="incorrect.mp3"></audio>
+        <div id="score-label">SCORE:</div>
+        <div id="scoreDisplay"><span id="score">0</span></div>
+        <button id="restart-btn">Restart Game</button>
+    </div>
+
+    <script src="script.js"></script>
+    <footer>
+        <p>&copy; DEVELOPED BY: Lâm Huỳnh Khang - Đoàn Nguyễn Minh Thư</p>
+    </footer>
+</body>
+
+</html>
